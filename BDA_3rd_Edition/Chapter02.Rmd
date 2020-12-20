@@ -1,0 +1,38 @@
+---
+title: "Chapter 2 Single-parameter Models"
+author: "Hendra Bunyamin"
+date: "12/20/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Let's import ggplot2 for plotting.
+```{r}
+library(ggplot2)
+theme_set(theme_minimal())
+```
+
+## Probability of a girl birth given placenta previa 
+437 girls and 543 boys have been observed. Calculate and plot the posterior distribution of the proportion of girls $\theta$, using uniform prior on $\theta$.
+
+### Analysis using a uniform prior distribution
+Under a uniform prior distribution for the probability of a girl birth, the posterior distribution is Beta(438, 544).    
+`seq` creates evenly spaced values as follows:
+```{r}
+df1 <- data.frame(theta = seq(0.375, 0.525, 0.001))
+a <- 438
+b <- 544
+head(df1)
+```
+
+`dbeta` computes the posterior density.     
+```{r}
+df1$p <- dbeta(df1$theta, a, b)
+head(df1)
+```
+
+
+

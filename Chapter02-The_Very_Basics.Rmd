@@ -1,0 +1,39 @@
+---
+title: "Chapter02 The Very Basics"
+author: "Hendra Bunyamin"
+date: "12/17/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 2.4 Writing Your Own Functions
+
+We have working R code that simulates rolling a pair of dice:
+
+```{r}
+die <- 1:6
+dice <- sample(die, size = 2, replace=TRUE)
+sum(dice)
+```
+
+
+```{r}
+
+```
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
