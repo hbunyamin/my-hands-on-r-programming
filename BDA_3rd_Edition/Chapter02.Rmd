@@ -28,11 +28,44 @@ b <- 544
 head(df1)
 ```
 
-`dbeta` computes the posterior density.     
+As we read page $35$ from the book, the posterior density for $\theta$ is 
+$$ \begin{aligned}
+  \Pr(\theta \mid y) &\propto \theta^y (1 - \theta)^{n-y} \theta^{\alpha-1} (1-\theta)^{\beta - 1} \\
+                     &= \theta^{y+\alpha-1} (1-\theta)^{n-y+\beta-1} \\
+                     &= \text{Beta}(\theta \mid \alpha+y, \beta+n-y).
+\end{aligned} $$
+
+Specifically, `dbeta` computes the posterior density.   
 ```{r}
 df1$p <- dbeta(df1$theta, a, b)
 head(df1)
 ```
 
+Next, we compute $95\%$ **central interval**.    
+The `seq` creates evenly spaced values from $2.5\%$ quantile to $97.5\%$ quantile (i.e., $95\%$ central interval).     
+The `qbeta` computes the value for a given quantile given parameters `a` and `b`.
 
+```{r}
+df2 <- data.frame(theta = seq(qbeta(0.025, a, b), qbeta(0.975, a, b), length.out = 100))
+```
+
+Subsequently, we compute the _posterior density_.     
+```{r}
+df2$p <- dbeta(df2$theta, a, b)
+```
+
+We also plot the posterior ($\text{Beta}(438, 544)$) and $48.8\%$  line for population average.
+```{r}
+ggplot(mapping = aes(theta, p)) +
+  geom_line(data = df1) +
+  # Add a layer of colorized 95% posterior interval
+  geom_area(data = df2, aes(fill='1')) +
+  # Add the proportion of girl babies in general population
+  geom_vline(xintercept = 0.488, linetype='dotted') +
+  # Decorate the plot a little
+  labs(title='Uniform prior -> Posterior is Beta(438,544)', y = '') +
+  scale_y_continuous(expand = c(0, 0.1), breaks = NULL) +
+  scale_fill_manual(values = 'lightblue', labels = '95% posterior interval') +
+  theme(legend.position = 'bottom', legend.title = element_blank())
+```
 
