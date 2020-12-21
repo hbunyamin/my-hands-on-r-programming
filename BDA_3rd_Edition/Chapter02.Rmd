@@ -69,4 +69,10 @@ ggplot(mapping = aes(theta, p)) +
   theme(legend.position = 'bottom', legend.title = element_blank())
 ```
 
-## The End
+### Analysis Using a 3 (three) Different Choices for Priors    
+
+We provide three different choices for priors as follows:     
+1. Beta(0.488\*2,(1-0.488)\*2)    
+2. Beta(0.488\*20,(1-0.488)\*20)    
+3. Beta(0.488\*200,(1-0.488)\*200)
+
