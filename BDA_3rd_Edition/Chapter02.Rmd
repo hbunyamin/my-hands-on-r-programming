@@ -76,3 +76,6 @@ We provide three different choices for priors as follows:
 2. Beta(0.488\*20,(1-0.488)\*20)    
 3. Beta(0.488\*200,(1-0.488)\*200)
 
+_**TODO LIST**_
+
+### Analysis Using 
