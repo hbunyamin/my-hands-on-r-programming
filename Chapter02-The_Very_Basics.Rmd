@@ -1,5 +1,5 @@
 ---
-title: "Chapter02 The Very Basics"
+title: "Chapter 2 The Very Basics"
 author: "Hendra Bunyamin"
 date: "12/17/2020"
 output: pdf_document
@@ -8,32 +8,65 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Chapter 2 The Very Basics
 
-## 2.4 Writing Your Own Functions
-
-We have working R code that simulates rolling a pair of dice:
-
+## 2.3 Functions
+`round` function is used to round a number.
+```{r}
+round(3.1415)
+```
+`factorial` function is used to calculate the factorial of a number.
+```{r}
+factorial(3)
+```
+`mean` function is used to compute the mean of number(s).
+```{r}
+mean(1:6)
+```
+We can combine `round` and `mean` functions as follows:
+```{r}
+round(mean(1:6))
+```
+The `sample` function is used to sample.
 ```{r}
 die <- 1:6
-dice <- sample(die, size = 2, replace=TRUE)
+sample(x = die, size=1)
+```
+`args` can be used to view the arguments of a function.
+```{r}
+args(round)
+args(sample)
+```
+`round` method can be accompanied with `digits`, for example:
+```{r}
+round(3.1415, digits = 2)
+```
+By **default**, the `sample` function is _without replacement_.
+```{r}
+sample(die, size=2)
+```
+When we want to `sample` _with replacement_, we can set `replace=TRUE` as follows:
+```{r}
+sample(die, size=2, replace = TRUE)
+```
+If you want to add up the dice, you can feed your result straight into the `sum` function:
+```{r}
+dice <- sample(die, size=2, replace = TRUE)
+dice
+
 sum(dice)
 ```
 
-
+## 2.4 Writing Your Own Functions
+We are going to write a function which returns the sum of rolling two dice.
 ```{r}
-
+roll <- function(){
+  die <- 1:6
+  dice <- sample(die, size=2, replace = TRUE)
+  sum(dice)
+}
+result <-  roll()
+result
 ```
+When you run a function in R, R will execute all of the code in the body and then return **the result of the last line of code**.
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
