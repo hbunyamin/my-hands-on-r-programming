@@ -215,7 +215,7 @@ cl <- seq(1e-5, max(dfj$z), length.out = 6)
 
 ### Demo 3.1 Visualise the joint and marginal densities
 Visualise the joint density and marginal densities of the posterior of normal distribution with unknown mean and variance.
-
+     
 Create a plot of the marginal density of mu,
 \begin{equation*}
   \Pr(\mu \mid y).
