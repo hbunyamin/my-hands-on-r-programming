@@ -71,4 +71,3 @@ result <-  roll()
 result
 ```
 When you run a function in R, R will execute all of the code in the body and then return **the result of the last line of code**.
-
