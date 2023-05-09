@@ -1666,7 +1666,7 @@ function.</p>
 <p>By <strong>default</strong>, the <code>sample</code> function is
 <em>without replacement</em>.</p>
 <pre class="r"><code>sample(die, size=2)</code></pre>
-<pre><code>## [1] 1 4</code></pre>
+<pre><code>## [1] 2 5</code></pre>
 <p>When we want to <code>sample</code> <em>with replacement</em>, we can
 set <code>replace=TRUE</code> as follows:</p>
 <pre class="r"><code>sample(die, size=2, replace = TRUE)</code></pre>
@@ -1675,9 +1675,9 @@ set <code>replace=TRUE</code> as follows:</p>
 into the <code>sum</code> function:</p>
 <pre class="r"><code>dice &lt;- sample(die, size=2, replace = TRUE)
 dice</code></pre>
-<pre><code>## [1] 2 2</code></pre>
+<pre><code>## [1] 5 3</code></pre>
 <pre class="r"><code>sum(dice)</code></pre>
-<pre><code>## [1] 4</code></pre>
+<pre><code>## [1] 8</code></pre>
 </div>
 <div id="writing-your-own-functions" class="section level2">
 <h2>2.4 Writing Your Own Functions</h2>
@@ -1690,7 +1690,7 @@ dice.</p>
 }
 result &lt;-  roll()
 result</code></pre>
-<pre><code>## [1] 4</code></pre>
+<pre><code>## [1] 10</code></pre>
 <p>When you run a function in R, R will execute all of the code in the
 body and then return <strong>the result of the last line of
 code</strong>.</p>
