@@ -48,6 +48,7 @@ tb <- tb %>%
     uhat2 = y - yhat2)
 ```
 
+Mari kita lihat statistika dari $x$, $y$, dan $u$.
 ```{r}
 summary(tb[1:3])
 ```
