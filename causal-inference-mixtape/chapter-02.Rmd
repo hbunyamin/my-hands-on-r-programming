@@ -66,9 +66,6 @@ tb %>% lm(y ~ x, .) %>% ggplot(aes( x=x, y=y  )) +
 ```
 
 
-
-
-
 ## Including Plots
 
 You can also embed plots, for example:
