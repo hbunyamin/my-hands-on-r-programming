@@ -1,11 +1,8 @@
 ---
 title: "Chapter 2 The Very Basics"
 author: "Hendra Bunyamin"
-date: "12/17/2020"
-output:
-  pdf_document: default
-  html_document:
-    df_print: paged
+date: "17 December 2020"
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -56,23 +53,32 @@ The `sample` function is used to sample.
 die <- 1:6
 sample(x = die, size=1)
 ```
+
+
+<!-- =========================== -->
+<!-- Fungsi ke-6: args    -->
+<!-- ===========================  -->
 `args` can be used to view the arguments of a function.
 ```{r}
 args(round)
 args(sample)
 ```
+
 `round` method can be accompanied with `digits`, for example:
 ```{r}
 round(3.1415, digits = 2)
 ```
+
 By **default**, the `sample` function is _without replacement_.
 ```{r}
 sample(die, size=2)
 ```
+
 When we want to `sample` _with replacement_, we can set `replace=TRUE` as follows:
 ```{r}
 sample(die, size=2, replace = TRUE)
 ```
+
 If you want to add up the dice, you can feed your result straight into the `sum` function:
 ```{r}
 dice <- sample(die, size=2, replace = TRUE)
@@ -99,6 +105,12 @@ result
 ```
 When you run a function in R, R will execute all of the code in the body and then return **the result of the last line of code**.
 
+### 2.4.1 The Function Constructor
+
+## 2.5 Arguments
+
+![Definisi dari Fungsi](images/function.png){width=100%}
+## 2.6 Scripts
 
 
 

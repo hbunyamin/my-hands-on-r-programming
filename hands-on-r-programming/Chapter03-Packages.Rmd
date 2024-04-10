@@ -1,0 +1,17 @@
+---
+title: "Chapter 3 Packages"
+author: "Hendra Bunyamin"
+date: "10 April 2024"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE)
+```
+
+## 3.1 Packages
+
+```{r}
+library(ggplot2)
+```
+
