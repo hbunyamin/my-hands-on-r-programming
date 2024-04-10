@@ -3,32 +3,54 @@ title: "Chapter 2 The Very Basics"
 author: "Hendra Bunyamin"
 date: "12/17/2020"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 ```
 # Chapter 2 The Very Basics
 
+Chapter 2 dari buku [**Hands-on Programming with R**](https://rstudio-education.github.io/hopr/). Catatan ini merupakan bagian dari proyek 1: **Weighted Dice**.
+
 ## 2.3 Functions
+<!-- ====================  -->
+<!-- Fungsi ke-1: round  -->
+<!-- ====================  -->
 `round` function is used to round a number.
 ```{r}
 round(3.1415)
 ```
+
+<!-- ======================== -->
+<!-- Fungsi ke-2: factorial    -->
+<!-- ========================  -->
 `factorial` function is used to calculate the factorial of a number.
 ```{r}
 factorial(3)
 ```
+
+<!-- ======================== -->
+<!-- Fungsi ke-3: mean    -->
+<!-- ========================  -->
 `mean` function is used to compute the mean of number(s).
 ```{r}
 mean(1:6)
 ```
+
+<!-- =========================== -->
+<!-- Fungsi ke-4: round & mean    -->
+<!-- ===========================  -->
 We can combine `round` and `mean` functions as follows:
 ```{r}
 round(mean(1:6))
 ```
+
+<!-- =========================== -->
+<!-- Fungsi ke-5: sample    -->
+<!-- ===========================  -->
 The `sample` function is used to sample.
 ```{r}
 die <- 1:6
