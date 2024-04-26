@@ -10,9 +10,16 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE)
 ```
 
 ## 3.1 Packages
+- Package `qplot` berarti quick plot. 
+- Berikut adalah fungsinya dan `qplot` is a long function
 
 ```{r}
 library(ggplot2)
 qplot
 ```
+
+- If you give `qplot` two vectors of equal lengths, `qplot` will draw a scatterplot for you. 
+- `qplot` will use the first vector as a set of x values and the second vector as a set of y values.
+-  Until now, we've been creating sequences of numbers with the `:` operator; but you can also create vectors of numbers with the `c` function.
+- Give `c` all of the numbers that you want to appear in the vector, separated by a comma. `c` stands for **_concatenate_**, but you can think of it as "collect" or "combine"/
 

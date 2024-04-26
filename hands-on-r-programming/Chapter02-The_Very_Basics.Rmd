@@ -64,6 +64,9 @@ args(round)
 args(sample)
 ```
 
+<!-- =========================== -->
+<!-- Fungsi ke-7: round    -->
+<!-- ===========================  -->
 `round` method can be accompanied with `digits`, for example:
 ```{r}
 round(3.1415, digits = 2)
