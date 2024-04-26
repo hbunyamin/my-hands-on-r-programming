@@ -115,5 +115,20 @@ When you run a function in R, R will execute all of the code in the body and the
 ![Definisi dari Fungsi](images/function.png){width=100%}
 ## 2.6 Scripts
 
+Menggunakan `qplot` dengan data pakai `c`.
+
+```{r}
+library("ggplot2")
+
+x <- c(-1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1)
+x
+##  -1.0 -0.8 -0.6 -0.4 -0.2  0.0  0.2  0.4  0.6  0.8  1.0
+
+y <- x^3
+y
+## -1.000 -0.512 -0.216 -0.064 -0.008  0.000  0.008  0.064  0.216 0.512  1.000
+
+qplot(x,y)
+```
 
 
