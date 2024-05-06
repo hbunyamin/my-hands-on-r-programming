@@ -1,5 +1,5 @@
 ---
-title: "Chapter 2 The Very Basics"
+title: "Rangkuman Hands-on Programming with R"
 author: "Hendra Bunyamin"
 date: "17 December 2020"
 output: pdf_document
@@ -8,11 +8,15 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 ```
-# Chapter 2 The Very Basics
+# Chapter 1 The Very Basics
 
-Chapter 2 dari buku [**Hands-on Programming with R**](https://rstudio-education.github.io/hopr/). Catatan ini merupakan bagian dari proyek 1: **Weighted Dice**.
+Chapter 1 dari buku [**Hands-on Programming with R**](https://rstudio-education.github.io/hopr/). Catatan ini merupakan bagian dari proyek 1: **Weighted Dice**.
 
-## 2.3 Functions
+## The R User Interface
+
+## Objects
+
+## Functions
 <!-- ====================  -->
 <!-- Fungsi ke-1: round  -->
 <!-- ====================  -->
@@ -44,6 +48,8 @@ We can combine `round` and `mean` functions as follows:
 ```{r}
 round(mean(1:6))
 ```
+
+## Sample with Replacement
 
 <!-- =========================== -->
 <!-- Fungsi ke-5: sample    -->
@@ -95,7 +101,7 @@ die <- 1:6
 
 ```
 
-## 2.4 Writing Your Own Functions
+## Writing Your Own Functions
 We are going to write a function which returns the sum of rolling two dice.
 ```{r}
 roll <- function(){
@@ -108,12 +114,12 @@ result
 ```
 When you run a function in R, R will execute all of the code in the body and then return **the result of the last line of code**.
 
-### 2.4.1 The Function Constructor
+### The Function Constructor
 
-## 2.5 Arguments
+## Arguments
 
 ![Definisi dari Fungsi](images/function.png){width=100%}
-## 2.6 Scripts
+## Scripts
 
 Menggunakan `qplot` dengan data pakai `c`.
 
@@ -130,5 +136,27 @@ y
 
 qplot(x,y)
 ```
+
+## Summary
+
+
+# Packages and Help Pages
+
+## Packages
+- Package `qplot` berarti quick plot. 
+- Berikut adalah fungsinya dan `qplot` is a long function
+
+```{r}
+library(ggplot2)
+qplot
+```
+
+- If you give `qplot` two vectors of equal lengths, `qplot` will draw a scatterplot for you. 
+- `qplot` will use the first vector as a set of x values and the second vector as a set of y values.
+-  Until now, we've been creating sequences of numbers with the `:` operator; but you can also create vectors of numbers with the `c` function.
+- Give `c` all of the numbers that you want to appear in the vector, separated by a comma. `c` stands for **_concatenate_**, but you can think of it as "collect" or "combine"/
+
+
+
 
 
