@@ -8,13 +8,15 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 ```
-# Chapter 1 The Very Basics
+# Chapter 1: The Very Basics
 
 Chapter 1 dari buku [**Hands-on Programming with R**](https://rstudio-education.github.io/hopr/). Catatan ini merupakan bagian dari proyek 1: **Weighted Dice**.
 
 ## The R User Interface
+Tidak ada yang penting.
 
 ## Objects
+Tidak ada yang penting.
 
 ## Functions
 <!-- ====================  -->
