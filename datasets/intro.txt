@@ -1,9 +1,0 @@
-A computer program is a sequence of commands and instructions to
-effectively solve a given problem. Such a problem may involve
-calculations, data processing, or both. Each computer program is
-based on an underlying procedure called algorithm. An algorithm
-may be implemented in different ways, leading to different
-programs using the same procedure. We follow this convention
-throughout this book, where an algorithm refers to a list of
-procedures whereas a program refers to its implementation as a
-code.
