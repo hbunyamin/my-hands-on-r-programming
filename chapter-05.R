@@ -50,9 +50,14 @@ sum(text)
 die <- c(1, 2, 3, 4, 5, 6)
 die
 
-
+# Terlihat bahwa tipe dari die sama meskipun die sudah diubah dim-nya tetapi class-nya berubah.
+# Before:
 typeof(die)
-
+class(die)
+dim(die) <- c(2,3)
+# After:
+typeof(die)
+class(die)
 
 # --------------------
 # 5.1.2 Integers
@@ -140,6 +145,58 @@ m
 # ----------------------------------------------------------------------------------------------------------------
 ar <- array(c(11:14, 21:24, 31:34), dim = c(2, 2, 3))
 ar
+
+# ---------------------------------------------------------------------------------------------------------------
+#   Exercise 5.3 (Make a matrix)
+#   - Create the following matrix, which stores the name and suit of every card in a royal flush. 
+# ----------------------------------------------------------------------------------------------------------------
+hand1 <- c("ace", "king", "queen", "jack", "ten", "spades", "spades", "spades", "spades", "spades")
+matrix(hand1, nrow = 5) # Cara ke-1
+matrix(hand1, ncol = 2) # Cara ke-1
+dim(hand1) <- c(5, 2)   # Cara ke-3
+hand1
+
+# ------------------------------------
+#   5.5.1 Dates and Times
+# ------------------------------------
+now <- Sys.time()
+now
+
+typeof(now)
+class(now)
+
+unclass(now)
+
+mil <- 1000000
+mil
+
+class(mil) <- c("POSIXct", "POSIXt")
+mil
+
+# ------------------------------------
+#   5.5.2 Factors
+# ------------------------------------
+gender <- factor(c("male", "female", "female", "male"))
+
+typeof(gender)
+attributes(gender)
+
+unclass(gender)
+gender
+
+# You can convert a factor to a character string with the as.character function.
+as.character(gender)
+
+# ------------------------------------
+#   5.7 Lists
+# ------------------------------------
+list1 <- list(100:130, "R", list(TRUE, FALSE))
+list1
+
+list2 <- list(100:130, "R", array(c(TRUE, FALSE)))
+list2
+
+
 
 
 
