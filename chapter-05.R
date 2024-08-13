@@ -196,6 +196,65 @@ list1
 list2 <- list(100:130, "R", array(c(TRUE, FALSE)))
 list2
 
+# ------------------------------------------------------------------------------------------------------------------------------------
+#   5.5 Lists
+# - Lists are like atomic vectors because they group data into a one-dimensional set. 
+# - However, lists do not group together individual values; lists group together R objects, such as atomic vectors and other lists.
+# ------------------------------------------------------------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------------------------------
+#  Exercise 5.5 (Use a List to Make a Card)
+#  - Use a list to store a single playing card, like the ace of hearts, which has a point value of one. 
+#  - The list should save the face of the card, the suit, and the point value in separate elements. 
+# ---------------------------------------------------------------------------------------------------------
+card <- list("ace", "hearts", 1)
+card
+
+
+# ------------------------------------------------------------------------------------------------------------------------
+#   5.8 Data Frames
+# - Data frames are the two-dimensional version of a list. 
+# - They are far and away the most useful storage structure for data analysis, and 
+#     they provide an ideal way to store an entire deck of cards. 
+# - You can think of a data frame as R’s equivalent to the Excel spreadsheet because it stores data in a similar format.
+# - Data frames group vectors together into a two-dimensional table. 
+# - Each vector becomes a column in the table. 
+# - As a result, each column of a data frame can contain a different type of data; but within a column, every cell must be the same type of data,
+# ------------------------------------------------------------------------------------------------------------------------
+df <- data.frame(face=c("ace", "two", "six"), suit=c("clubs", "clubs", "clubs"), value=c(1,2,3))
+df
+
+typeof(df)
+class(df)
+str(df)
+
+# ---------------------------
+#   Membuat deck kartu
+# ---------------------------
+deck <- data.frame(
+  face = c("king", "queen", "jack", "ten", "nine", "eight", "seven", "six",
+           "five", "four", "three", "two", "ace", "king", "queen", "jack", "ten", 
+           "nine", "eight", "seven", "six", "five", "four", "three", "two", "ace", 
+           "king", "queen", "jack", "ten", "nine", "eight", "seven", "six", "five", 
+           "four", "three", "two", "ace", "king", "queen", "jack", "ten", "nine", 
+           "eight", "seven", "six", "five", "four", "three", "two", "ace"),  
+  suit = c("spades", "spades", "spades", "spades", "spades", "spades", 
+           "spades", "spades", "spades", "spades", "spades", "spades", "spades", 
+           "clubs", "clubs", "clubs", "clubs", "clubs", "clubs", "clubs", "clubs", 
+           "clubs", "clubs", "clubs", "clubs", "clubs", "diamonds", "diamonds", 
+           "diamonds", "diamonds", "diamonds", "diamonds", "diamonds", "diamonds", 
+           "diamonds", "diamonds", "diamonds", "diamonds", "diamonds", "hearts", 
+           "hearts", "hearts", "hearts", "hearts", "hearts", "hearts", "hearts", 
+           "hearts", "hearts", "hearts", "hearts", "hearts"), 
+  value = c(13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 10, 9, 8, 
+            7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 
+            10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+)
+
+# ------------------------------------------------------------------------------------------------------------------------
+#   5.9 Loading Data
+# ------------------------------------------------------------------------------------------------------------------------
 
 
 
