@@ -54,3 +54,54 @@ deck2[c(13, 26, 39, 52), ]
 
 deck2[c(13, 26, 39, 52), 3]
 
+deck2$value[c(13, 26, 39, 52)]
+
+# ===================================
+#    7.2 Logical Subsetting
+# ===================================
+deck2 <- deck
+deck2$face
+
+deck2$face == "ace"
+sum(deck2$face == "ace")
+
+deck2$value[deck2$face == "ace"]
+
+deck2$value[deck2$face == "ace"] <- 14
+tail(deck2)
+
+# Logical subsetting is one of the things R does best. 
+# In fact, logical subsetting is a key component of vectorized programming, 
+# a coding style that lets you write fast and efficient R code, which we will study in Speed.
+
+# -----------------------------------------------------------------
+# Let’s put logical subsetting to use with a new game: hearts. 
+# In hearts, every card has a value of zero:
+deck4 <- deck
+deck4$value <- 0
+head(deck4,13)
+
+queenOfSpades <- deck4$face == "queen" & deck4$suit == "spades"
+deck4[queenOfSpades, ]
+
+deck4$value[queenOfSpades] <- 13
+class(deck4)
+typeof(deck4)
+
+class(deck4["value"])
+typeof(deck4["value"])
+
+class(deck4[["value"]])
+typeof(deck4[["value"]])
+
+sum(deck4["value"]) 
+sum(deck4[["value"]]) 
+
+deck4[queenOfSpades,]
+
+# ---------------------------------------
+#   Exercise 7.3 (Practice with Tests)
+# ---------------------------------------
+
+
+
