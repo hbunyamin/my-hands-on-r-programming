@@ -127,3 +127,45 @@ all(z %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
 # =============================================================
 deck5 <- deck
 
+head(deck5, 13)
+
+# You can change the value of the face cards in one fell swoop with
+facecard <- deck5$face %in% c("king", "queen", "jack")
+
+deck5[facecard,]
+
+deck5$value[facecard] <- 10
+head(deck5,13)
+
+# ===================================
+#    7.3 Missing Information
+# ===================================
+# The NA character is a special symbol in R. 
+# It stands for “not available” and can be used as a placeholder for missing information.
+1+NA
+
+NA == 1
+
+c(NA, 1:50)
+
+mean(c(NA, 1:50))
+
+mean(c(NA, 1:50), na.rm = TRUE)
+
+
+c(1,2,3,NA) == NA
+
+is.na(NA)
+
+vec <- c(1,2,3,NA)
+is.na(vec)
+
+# Let’s set all of your ace values to NA. 
+# This will accomplish two things. 
+# First, it will remind you that you do not know the final value of each ace. 
+# Second, it will prevent you from accidentally scoring a hand that has an ace before you determine the ace’s final value.
+
+
+deck5$value[deck5$face == "ace"] <- NA
+
+head(deck5,13)
