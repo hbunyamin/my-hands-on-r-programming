@@ -165,4 +165,69 @@ slot_display(play())
 # ==========================
 # 10.3 Generic Functions 
 # ==========================
+print(play())
+print
 
+
+# =============
+# 10.4 Methods
+# =============
+print.POSIXct
+
+print.factor
+
+methods(print)
+
+# =======================
+# 10.4.1 Method Dispatch
+# =======================
+class(one_play) <- "slots"
+
+args(print)
+
+print.slots <- function(x, ...){
+  cat("I'm using the print.slots method")
+}
+
+print(one_play)
+
+one_play
+
+rm(print.slots)
+
+# =====================================
+# Exercise 10.2 (Make a Print Method)
+# =====================================
+# Write a new print method for the slots class. 
+# The method should call slot_display to return well-formatted slot-machine output.
+
+print.slots <-function(x, ...){
+  slot_display(x)
+}
+
+one_play
+
+# =====================================
+# Exercise 10.3 (Add a Class)
+# =====================================
+# Modify the play function so it assigns slots to the class attribute of its output: 
+play <- function() {
+  symbols <- get_symbols()
+  structure(score(symbols), symbols = symbols, class="slots")
+}
+
+class(play())   
+play()
+
+# =============
+# 10.5 Classes
+# =============
+methods(class="factor")
+
+play1 <- play()
+play1
+
+play2 <- play()
+play2
+
+c(play1, play2)
