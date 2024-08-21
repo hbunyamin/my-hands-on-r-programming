@@ -34,6 +34,15 @@ score <- function (symbols) {
   prize * 2 ^ diamonds
 }
 
+# ==============
+#   Test Drive
+# ==============
+temp_symbol <- c("DD", "C", "DD")
+sum(temp_symbol == "DD")
+
+
+
+
 play <- function() {
   symbols <- get_symbols()
   print(symbols)

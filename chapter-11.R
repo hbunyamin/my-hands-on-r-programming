@@ -137,3 +137,5 @@ head(combos,5)
 sum(combos$prob * combos$prize)
 
 
+
+
